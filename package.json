@@ -1,0 +1,22 @@
+{
+  "name": "aqa_cypress_sadovets",
+  "version": "1.0.0",
+  "description": "aqa_cypress_sadovets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sadovec-k/aqa_cypress_sadovets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sadovec-k/aqa_cypress_sadovets/issues"
+  },
+  "homepage": "https://github.com/sadovec-k/aqa_cypress_sadovets#readme",
+  "devDependencies": {
+    "cypress": "^14.1.0"
+  }
+}
