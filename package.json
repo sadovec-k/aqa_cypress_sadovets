@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sadovec-k/aqa_cypress_sadovets#readme",
   "devDependencies": {
-    "cypress": "^14.1.0"
+    "cypress": "^14.1.0",
+    "cypress-xpath": "^2.0.1"
   }
 }
