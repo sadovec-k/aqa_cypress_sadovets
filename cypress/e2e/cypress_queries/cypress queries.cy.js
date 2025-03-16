@@ -1,7 +1,5 @@
 require("cypress-xpath")
 
-// Створення аліасу для елементу
-//cy.get('.login-button').as('loginButton');
 
 describe('Test buttons on page https://qauto.forstudy.space/', () => {
     beforeEach(() => {
