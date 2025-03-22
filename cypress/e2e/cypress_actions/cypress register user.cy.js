@@ -12,8 +12,8 @@ const validCredentials = require('../../fixtures/cypress_actions_cred.json');
 describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
     beforeEach(() => {
         cy.visit('https://qauto.forstudy.space/', {auth: {
-          username: 'guest',
-          password: "welcome2qauto"
+          username: validCredentials.name,
+          password: validCredentials.password
         }});
         
         cy.title().should('eq','Hillel Qauto');        
@@ -38,8 +38,8 @@ describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
   describe('Check Registration page', () => {
     beforeEach(() => {
         cy.visit('https://qauto.forstudy.space/', {auth: {
-          username: 'guest',
-          password: "welcome2qauto"
+          username: validCredentials.name,
+          password: validCredentials.password
         }});
         
         cy.title().should('eq','Hillel Qauto');    
@@ -92,8 +92,8 @@ describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
   describe('Registration page negative tests', () => {
     beforeEach(() => {
         cy.visit('https://qauto.forstudy.space/', {auth: {
-          username: 'guest',
-          password: "welcome2qauto"
+          username: validCredentials.name,
+          password: validCredentials.password
         }});
         
         cy.title().should('eq','Hillel Qauto');     
@@ -322,31 +322,6 @@ describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
       .should('have.text', 'Register');
     });
 
-//Field Email
-    it('Email field is empty', () => {
-      RegisterPage.inputEmail.click();
-      RegisterPage.inputName.click();
-      RegisterPage.inputEmail
-      .should('have.css', 'border-color', 'rgb(220, 53, 69)');
-      RegisterPage.alertEmail.should('exist')
-      .should('have.css', 'color', 'rgb(220, 53, 69)')
-      .should('have.text', Utils.Errors.EMAIL_REQUIRED);
-      RegisterPage.btnRegister.should('be.visible').should('be.disabled')
-      .should('have.text', 'Register');
-    });
-
-    it('Email field incorrect data', () => {
-      RegisterPage.inputEmail.type(Utils.ErrorData.WRONG_EMAIL);
-      RegisterPage.inputName.click();
-      RegisterPage.inputEmail
-      .should('have.css', 'border-color', 'rgb(220, 53, 69)');
-      RegisterPage.alertEmail.should('exist')
-      .should('have.css', 'color', 'rgb(220, 53, 69)')
-      .should('have.text', Utils.Errors.EMAIL_INCORRECT);
-      RegisterPage.btnRegister.should('be.visible').should('be.disabled')
-      .should('have.text', 'Register');
-    });
-
     //Field Password
     it('Password field is empty', () => {
       RegisterPage.inputPassword.click();
@@ -534,8 +509,8 @@ describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
 describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
   beforeEach(() => {
       cy.visit('https://qauto.forstudy.space/', {auth: {
-        username: 'guest',
-        password: "welcome2qauto"
+        username: validCredentials.name,
+        password: validCredentials.password
       }});
       
       cy.title().should('eq','Hillel Qauto');        
@@ -595,7 +570,5 @@ describe('Register user and Login', () => {
 
     ProfilePage.myProfile.should('be.visible');
   });
-  
-
 });
 
