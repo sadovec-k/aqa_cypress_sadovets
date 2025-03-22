@@ -506,32 +506,6 @@ describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
 
 });
 
-describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
-  beforeEach(() => {
-      cy.visit('https://qauto.forstudy.space/', {auth: {
-        username: validCredentials.name,
-        password: validCredentials.password
-      }});
-      
-      cy.title().should('eq','Hillel Qauto');        
-    });
-
-  it('Check Login button on Home Page', () => {
-      HomePage.signIn.click();
-      LoginPage.title
-      .should('be.visible')
-      .should('not.be.disabled');
-  });
-
-  it('Check Register button on Home Page', () => {
-      HomePage.singUp.click();
-      RegisterPage.title
-      .should('be.visible')
-      .should('not.be.disabled');
-  });
-
-});
-
 describe('Register user and Login', () => {
   beforeEach(() => {    
       cy.visit('https://qauto.forstudy.space/', {auth: {
