@@ -12,7 +12,7 @@ describe('Test buttons on page https://qauto.forstudy.space/', () => {
       });
 
     it('Check SignIn button', () => {
-      cy.xpath('//button[@class=\'hero-descriptor_btn btn btn-primary\']',{ timeout: 1000 })
+      cy.xpath('//button[@class=\'hero-descriptor_btn\']',{ timeout: 1000 })
             .should('be.visible')
             .should('not.be.disabled');
     });
