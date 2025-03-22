@@ -1,5 +1,3 @@
-import LoginPage from './LoginPage.js';
-
 export const Errors = {
 	INVALID_NAME: 'Name is invalid',
 	INVALID_LENGTH: 'Name has to be from 2 to 20 characters long',
@@ -51,24 +49,3 @@ export function getEmail(){
     return `example${date}@example.com`;
 }
 
-Cypress.Commands.overwrite('type', (originalFn, element, text, options) => {
-    if (options && options.sensitive) {
-      // turn off original log
-      options.log = false
-      // create our own log with masked message
-      Cypress.log({
-        $el: element,
-        name: 'type',
-        message: '*'.repeat(text.length),
-      })
-    }
-  
-    return originalFn(element, text, options)
-  })
-
-  Cypress.Commands.add('login', (userEmail, password) => {
-    LoginPage
-    .typeEmail(userEmail)
-    .typePassword(password)
-    .clickLogin();
-  });
