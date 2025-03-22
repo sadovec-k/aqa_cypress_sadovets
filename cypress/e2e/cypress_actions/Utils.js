@@ -45,7 +45,6 @@ export const CorrectData = {
 
 export function getEmail(){
     let date = Date.now().toString();
-    console.log("Time is : " + date);
     return `example${date}@example.com`;
 }
 
