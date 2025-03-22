@@ -11,7 +11,7 @@ const validCredentials = require('../../fixtures/cypress_actions_cred.json');
 
 describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
     beforeEach(() => {
-        cy.visit('https://qauto.forstudy.space/', {auth: {
+        cy.visit(validCredentials.url, {auth: {
           username: validCredentials.name,
           password: validCredentials.password
         }});
@@ -37,7 +37,7 @@ describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
 
   describe('Check Registration page', () => {
     beforeEach(() => {
-        cy.visit('https://qauto.forstudy.space/', {auth: {
+        cy.visit(validCredentials.url, {auth: {
           username: validCredentials.name,
           password: validCredentials.password
         }});
@@ -91,7 +91,7 @@ describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
 
   describe('Registration page negative tests', () => {
     beforeEach(() => {
-        cy.visit('https://qauto.forstudy.space/', {auth: {
+        cy.visit(validCredentials.url, {auth: {
           username: validCredentials.name,
           password: validCredentials.password
         }});
@@ -508,7 +508,7 @@ describe('Check UI Login Form on page https://qauto.forstudy.space/', () => {
 
 describe('Register user and Login', () => {
   beforeEach(() => {    
-      cy.visit('https://qauto.forstudy.space/', {auth: {
+      cy.visit(validCredentials.url, {auth: {
         username: validCredentials.name,
         password: validCredentials.password
       }});
