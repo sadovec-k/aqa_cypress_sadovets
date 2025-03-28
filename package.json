@@ -4,7 +4,11 @@
   "description": "aqa_cypress_sadovets",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:open_qauto": "npx cypress open --config-file cypress.qauto.config.js",
+    "test:open_qauto2": "npx cypress open --config-file cypress.qauto2.config.js",
+    "mochawesom": "npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json"
+
   },
   "repository": {
     "type": "git",
@@ -18,9 +22,13 @@
   "homepage": "https://github.com/sadovec-k/aqa_cypress_sadovets#readme",
   "devDependencies": {
     "cypress": "^14.1.0",
-    "cypress-xpath": "^2.0.1",
-    "mochawesome": "^7.1.3",
-    "mochawesome-merge": "^5.0.0",
-    "mochawesome-report-generator": "^6.2.0"
-  }
+    "cypress-xpath": "^2.0.1"
+  },  
+  "reporter": "mochawesome",
+    "reporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "overwrite": false,
+      "html": false,
+      "json": true
+   }  
 }

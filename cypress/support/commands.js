@@ -19,6 +19,7 @@ Cypress.Commands.overwrite('type', (originalFn, element, text, options) => {
     LoginPage
     .typeEmail(userEmail)
     .typePassword(password)
+    .clickRememberMe()
     .clickLogin();
   });
  
