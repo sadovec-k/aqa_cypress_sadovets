@@ -21,6 +21,15 @@ class LoginPage {
       return this;
     }
 
+    get rememberMe() {
+      return cy.get('[id=remember]',{ timeout: 1000 });
+    }
+
+    clickRememberMe(){
+      this.rememberMe.click();
+      return this;
+    }
+
     get loginButton() {
       return cy.xpath('//button[text()=\'Login\']',{ timeout: 1000 });
     }
