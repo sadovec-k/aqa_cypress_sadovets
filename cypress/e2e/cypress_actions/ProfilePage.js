@@ -8,7 +8,7 @@ class ProfilePage {
     } 
 
     get fuelExpenses() {
-      return cy.get('a[href="/panel/expenses"]',{ timeout: 1000 });
+      return cy.xpath('//nav/a[contains(@class, \'header-link\') and text()=\'Fuel expenses\']',{ timeout: 1000 });
     }   
     
     get getItemByName() {
