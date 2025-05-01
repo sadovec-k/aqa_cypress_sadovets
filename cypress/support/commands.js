@@ -1,4 +1,4 @@
-import LoginPage from '../e2e/cypress_actions/LoginPage.js';
+import LoginPage from '../pom/LoginPage.js';
 
 Cypress.Commands.overwrite('type', (originalFn, element, text, options) => {
     if (options && options.sensitive) {
