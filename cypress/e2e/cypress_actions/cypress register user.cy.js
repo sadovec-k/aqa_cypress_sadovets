@@ -1,9 +1,9 @@
 require("cypress-xpath")
-import LoginPage from './LoginPage.js';
-import RegisterPage from './RegisterPage.js';
-import HomePage from './HomePage.js';
-import ProfilePage from './ProfilePage.js';
-import * as Utils from './Utils.js';
+import LoginPage from '../../pom/LoginPage.js';
+import RegisterPage from '../../pom/RegisterPage.js';
+import HomePage from '../../pom/HomePage.js';
+import ProfilePage from '../../pom/ProfilePage.js';
+import * as Utils from '../../utils/Utils.js';
 import '../../support/commands.js';
 
 let newUserEmail = '';

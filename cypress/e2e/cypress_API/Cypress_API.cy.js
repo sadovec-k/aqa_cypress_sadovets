@@ -1,10 +1,10 @@
 require("cypress-xpath");
-import LoginPage from '../cypress_actions/LoginPage.js';
-import HomePage from '../cypress_actions/HomePage.js';
+import LoginPage from '../../pom/LoginPage.js';
+import HomePage from '../../pom/HomePage.js';
 import '../../support/commands.js';
-import AddCarPage from '../cypress_actions/AddCarPage.js';
-import ProfilePage from '../cypress_actions/ProfilePage.js';
-import FuelExpensesPage from '../cypress_actions/FuelExpensesPage.js';
+import AddCarPage from '../../pom/AddCarPage.js';
+import ProfilePage from '../../pom/ProfilePage.js';
+import FuelExpensesPage from '../../pom/FuelExpensesPage.js';
 
 
 
